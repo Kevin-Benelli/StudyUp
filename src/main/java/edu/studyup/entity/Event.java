@@ -45,9 +45,9 @@ public class Event {
 		this.students = students;
 	}
 
-	public Date getDate() {
-		return date;
-	}
+    public Date getDate() {
+        return date == null ? null : (Date) date.clone();
+     }
 
 	public void setDate(Date date) {
         Date ndate = (Date)date.clone();
